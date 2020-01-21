@@ -1,11 +1,28 @@
-.container {
+@import '../../assets/styles/variables/colors';
+
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 30vh;
 
   & img {
-    margin-top: 30px;
+    margin-top: 15px;
+  }
+
+  .menu {
+    margin-top: 20px;
+    display: flex;
+    border-bottom: 1px solid #eee;
+
+    & a {
+      text-decoration: none;
+      padding: 10px 20px;
+
+      &.active {
+        color: $dark-40;
+      }
+    }
   }
 }

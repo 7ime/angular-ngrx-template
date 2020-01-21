@@ -1,4 +1,11 @@
-<div class="container">
+<div class="header">
   <h1>{{ title }}</h1>
   <img src="../../assets/images/user.svg" alt="">
+
+  <div class="menu">
+    <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+    <a [routerLink]="['/test']" routerLinkActive="active">Test Page</a>
+  </div>
 </div>
+
+<router-outlet></router-outlet>
