@@ -1,0 +1,14 @@
+<h2>Post Component</h2>
+
+<div *ngIf="posts$">
+  <div *ngFor="let post of posts$" class="list">
+    <div class="item">
+      <p>{{post.id}}</p>
+      <p>{{post.title}}</p>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="postsError$">
+  <p>Something went wrong</p>
+</div>

@@ -3,6 +3,7 @@ import {TestSceneComponent} from "./test-scene.component";
 import {SharedModule} from "../../shared/shared.module";
 import {RouterModule, Routes} from "@angular/router";
 import {TestApiSceneComponent} from "./test-api-scene/test-api-scene.component";
+import {PostsComponent} from "../../containers/posts/posts.component";
 
 const routes: Routes = [
   {
@@ -20,7 +21,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     TestSceneComponent,
-    TestApiSceneComponent
+    TestApiSceneComponent,
+    PostsComponent
   ],
   imports: [
     SharedModule,

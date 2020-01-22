@@ -10,6 +10,8 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {environment} from "../../environments/environment.prod";
 import {HomeSceneComponent} from "./scenes/home-scene/home-scene.component";
 import {SharedModule} from "./shared/shared.module";
+import {EffectsModule} from "@ngrx/effects";
+import {PostEffects} from "../store/effects/post.effects";
 
 
 @NgModule({
@@ -23,7 +25,10 @@ import {SharedModule} from "./shared/shared.module";
     StoreModule.forRoot(appReducers),
     StoreRouterConnectingModule.forRoot({stateKey: 'router'}),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    SharedModule
+    SharedModule,
+    EffectsModule.forRoot([
+      PostEffects
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

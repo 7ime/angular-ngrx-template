@@ -3,11 +3,18 @@ import {EPostActions, PostActions} from "../actions/post.actions";
 
 export const postReducers = (state = initialPostState, action: PostActions): IPostState => {
   switch (action.type) {
-    case EPostActions.GetPosts: {
+    case EPostActions.LoadedPostsSuccess: {
       return {
         ...state,
-        posts: action.payload
+        posts: action.payload,
+        error: false
       };
+    }
+    case EPostActions.LoadedPostsError: {
+      return {
+        ...state,
+        error: true
+      }
     }
     default:
       return state;
