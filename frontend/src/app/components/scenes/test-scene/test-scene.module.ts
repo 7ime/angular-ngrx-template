@@ -4,6 +4,7 @@ import {SharedModule} from "../../shared/shared.module";
 import {RouterModule, Routes} from "@angular/router";
 import {TestApiSceneComponent} from "./test-api-scene/test-api-scene.component";
 import {PostsComponent} from "../../containers/posts/posts.component";
+import {PostListComponent} from "../../presentational/post-list/post-list.component";
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
   declarations: [
     TestSceneComponent,
     TestApiSceneComponent,
-    PostsComponent
+    PostsComponent,
+    PostListComponent
   ],
   imports: [
     SharedModule,
